@@ -11,7 +11,7 @@ INNER JOIN departments d ON e.department_id = d.id;
 
 //2
 Նույն աղյուսակներով գրիր հարցում, որը ցույց կտա բոլոր աշխատողներին,
-նույնիսկ եթե նրանց բաժինը դեռ չպահպանված է (այսինքն department_id-ն NULL է)։
+նույնիսկ եթե նրանց բաժինը դեռ պահպանված չէ (այսինքն department_id-ն NULL է)։
 
 SELECT e.name, d.name AS department_name
 FROM employees e
