@@ -1,0 +1,40 @@
+//1
+Տրված է աղյուսակ՝
+employees(id, name, department, salary)
+Գրի՛ր հարցում, որը կվերադարձնի բոլոր աշխատակիցների անունները և բաժինները։
+
+SELECT name, department
+from employees;
+
+
+
+//2
+Վերցրու միայն այն աշխատակիցներին, որոնց salary > 1000 է։
+
+SELECT * FROM employees
+WHERE salary > 1000;
+
+//3
+Գրի՛ր հարցում, որը կվերադարձնի բոլոր աշխատակիցների անուններն ու աշխատավարձերը,
+դասավորված ըստ աշխատավարձի՝
+նվազման կարգով։
+
+SELECT  name, salary
+FROM employees
+ORDER BY salary DESC;
+
+
+//4
+Գրի՛ր հարցում, որը կվերադարձնի միայն առաջին 3 աշխատակիցների տվյալները աղյուսակից։
+
+SELECT * FROM employees
+LIMIT 3;
+
+
+
+//5
+Գրի՛ր հարցում, որը կվերադարձնի այն աշխատակիցներին,
+որոնց անունը սկսվում է տառով 'A'։
+
+SELECT * FROM employees
+WHERE name LIKE 'A%'

@@ -1,0 +1,39 @@
+//1
+Ունենք երկու աղյուսակ․
+employees(id, name, department_id)
+departments(id, name)
+Գրիր հարցում, որը կտպի աշխատողի անունը և իր բաժնի անունը։
+
+SELECT e.name, d.name AS department_name
+FROM employees e
+INNER JOIN departments d ON e.department_id = d.id;
+
+
+//2
+Նույն աղյուսակներով գրիր հարցում, որը ցույց կտա բոլոր աշխատողներին,
+նույնիսկ եթե նրանց բաժինը դեռ չպահպանված է (այսինքն department_id-ն NULL է)։
+
+SELECT e.name, d.name AS department_name
+FROM employees e
+LEFT JOIN departments d ON e.department_id = d.id;
+
+
+//3
+Ունենք աղյուսակ orders(id, customer_id, total_price)
+Գրիր հարցում, որը ցույց կտա յուրաքանչյուր հաճախորդի ընդհանուր գնումների գումարը։
+
+SELECT customer_id, SUM(total_price) AS total_spent
+FROM orders
+GROUP BY customer_id;
+
+
+//4
+Ունենք աղյուսակ՝
+orders(id, customer_id, total_price)
+Գրիր SQL հարցում, որը ցույց կտա
+այն հաճախորդներին, որոնց ընդհանուր գնումների գումարը գերազանցում է 1000-ը։
+
+SELECT customer_id
+FROM orders
+GROUP BY customer_id
+HAVING SUM(total_price) > 1000
