@@ -3,7 +3,6 @@ package practics;
 public class SecondMax {
 
     public static void main(String[] args) {
-
         int[] numbers = {5, 7, 1, 0, 3, 9, 6, 21};
         int max = numbers[0];
         int secondMax = numbers[0];

@@ -7,6 +7,7 @@ public final class ImmutableUser {
     private final String surname;
     private final int age;
 
+
     public ImmutableUser(int id, String name, String surname, int age) {
         this.id = id;
         this.name = name;

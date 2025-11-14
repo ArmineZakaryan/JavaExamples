@@ -24,6 +24,7 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
+
         int[] numbers = {5, 8, 9, 7, 1, 0, 3, 2};
         bubbleSort(numbers);
         for (int number : numbers) {
