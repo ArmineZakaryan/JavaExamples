@@ -6,7 +6,7 @@ public class Fibonacci {
         int firstTerm = 0;
         int secondTerm = 1;
 
-        System.out.println("Fibonacci Series up to " + n + " terms:");
+        System.out.println("Fibonacci series up to " + n + " terms:");
 
         for (int i = 1; i <= n; ++i) {
             System.out.print(firstTerm + ", ");
